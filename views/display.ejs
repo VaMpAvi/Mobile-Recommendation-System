@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assests/display.css">
+</head>
+
+<body>
+    <div class="main">
+        <%- include('partial/nav') %>
+
+        <div class="cards">
+  
+            <% data.docs.forEach(function(docs){ %>
+                <a style="text-decoration: none;" href="/getPhone/desc?name=<%- docs.mobile_name %>">
+                <div class="card">
+                    <img class="image" style="float: left;" src="http://localhost:3000/<%- docs.coverImage %>">
+                    <div class="mobdetails">
+                        <p> <%- docs.mobile_name %></p>
+                        <span class="price">&#8377;<%- docs.price %></span>
+    
+                    </div>
+                    </div></a>
+             
+          <%  }) %>
+            <!-- <div class="card">
+                <img style="float:left;"src="../assests/iphones.png">
+            </div>
+            <div class="card"></div>
+            <div class="card"></div> -->
+        </div>
+
+    </div>
+</body>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/assests/homestyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <%- include('partial/nav') %>
+    <main>
+
+      <section>
+
+        <div class="cards">
+          <div class="card card1">
+            <div class="Latest">Latest Devices</div>
+            <p style="float: left;">
+              <% data.phones.forEach(function(docs){ %>
+                <img class="bigboxt" src="/assests/oneplus.jpg">
+                <%})%>
+                  <!-- <img class="bigboxt" src="/assests/oneplus.jpg">
+            <img class="bigboxt" src="/assests/Google.jpg">
+            <img class="bigboxb" src="/assests/Small_Iphone.jpg">
+            <img class="bigboxb" src="/assests/oneplus.jpg"> -->
+            </p>
+          </div>
+
+          <% data.phones.forEach(function(docs){ %>
+            <a style="text-decoration: none;" href="/getPhone/desc?name=<%- docs.mobile_name %>">
+              <div class="card">
+                <p style="float: left;"><img src="/assests/<%- docs.coverImage %>" class="img"></p>
+                <p class="imgname">
+                  <%= docs.mobile_name %>
+                </p>
+                <span class="price">&#8377;<%= docs.price %></span>
+              </div>
+            </a>
+            <%} )%>
+              <!-- <div class="card">
+          <p style="float: left;"><img src="/assests/Samsung.jpg" class="img"></p>
+          <p class="imgname">Samsung Galaxy M32</p>
+          <span class="price">&#8377;200000.00</span>
+        </div>
+
+        <div class="card">
+          <p style="float: left;"><img src="/assests/oneplus.jpg" class="img"></p>
+          <p class="imgname">Oneplus 9 Pro</p>
+          <span class="price" style="padding-right:10px;">&#8377;200000.00</span>
+        </div>
+        <div class="card">
+          <p style="float: left;"><img src="/assests/Google.jpg" class="img"></p>
+          <p class="imgname">Google Pixel 6</p>
+          <span class="price">&#8377;200000.00</span>
+        </div> -->
+        </div>
+      </section>
+
+      <section>
+
+        <div class="cards">
+          <div class="avail">
+            <p style="text-align: center;">Avialable On</p>
+            <p style="float: right; margin-bottom: 1em;"><img src="/assests/flipkart.png"></p>
+            <p class="available"> Samsung Galaxy M32</p>
+            <p style="float: right;"><img src="/assests/amazon.png"></p>
+            <p class="available">One Plus 8 Pro</p>
+          </div>
+          <div class="card2"> <img class="image" src="/assests/Ipone (1).png"></div>
+          <div class="pallete">
+            <div class="one1" style="background-color: #9F5251;"> </div>
+            <div class="one" style="background-color:  #ABB9C2;"> </div>
+            <div class="one" style="background-color: #9D9EA0;"> </div>
+            <div class="one" style="background-color: #0A2D4D;"> </div>
+            <div class="one" style="background-color: #F7ECEA;"> </div>
+            <div class="one" style="background-color: #FAF9F7;"> </div>
+          </div>
+
+          <div class="card3">
+            <p class="image_name"> Apple iPhone 13 Mini </p>
+            <p class="image_name1"> [128GB]-[Prouduct] RED</p>
+            <div class="stars">
+              <p><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span>12,400</span>
+              </p>
+
+            </div>
+            <p><span class="image_price">&#8377;200000.00</span></p>
+            <p class="about">About this item
+              <br>13 cm (5.4-inch) Super Retina XDR display Cinematic mode adds shallow depth of field and shifts focus
+              automatically in your videos<br>
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="sidecard"></div>
+
+
+      </section>
+
+    </main>
+
+
+    <script>
+      async function data(key) {
+        const match = document.getElementById("list");
+        var text = "";
+        const res = await fetch("/getPhone/search/auto?search=" + key);
+        const data = await res.json().catch((err) => {
+          console.error(err);
+        });
+        if (data[0] != undefined && key != "") {
+          data.forEach((element) => {
+            console.log(element.mobile_name);
+            text += `<div class="searchlist">
+            <ul><a href="/getPhone/search?search=${element.mobile_name}">${element.mobile_name}</h4> </a></ul>
+            </div>`;
+          });
+          match.innerHTML = text;
+        } else match.innerHTML = "";
+      };
+
+      document.getElementById("search").addEventListener("keyup", (event) => {
+        var x = document.getElementById("search").value;
+        // console.log(document.cookie.split("="));
+        data(x);
+      });
+    </script>
+</body>
+
+</html>

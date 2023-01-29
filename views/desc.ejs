@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assests/desc.css">
+</head>
+
+<body>
+    <div class="background">
+        <%- include('partial/nav') %>
+        <div class="main">
+            <div class="image">
+                <img  style="width: 235px; height: 485px;"src="http://localhost:3000/<%- data.docs.coverImage %>">
+            </div>
+
+            <div class="pname">
+                <p class="image_name"> <%- data.docs.mobile_name %> </p>
+                <p class="image_name1"><%- data.docs.rom %>GB</p>
+                <p><span class="image_price">&#8377;<%- data.docs.price %></span></p>
+            </div>
+
+            <div class="pinfo">
+                <div class="second">
+                    <p class="Display">Display</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>Size:</td>
+                        <td>5.4 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Resolution:</td>
+                        <td>2340 x 1080 pixels,477 PPI </td>
+                    </tr>
+                    <tr>
+                        <td>Technology:</td>
+                        <td>OLED</td>
+                    </tr>
+                    <tr>
+                        <td>Refresh rate:</td>
+                        <td>60Hz</td>
+                    </tr>
+                    <tr>
+                        <td>Screen-to-body:</td>
+                        <td>68.31 %</td>
+                    </tr>
+                    <tr>
+                        <td>Features:</td>
+                        <td>HDR support, Oleophobic coating, Scratch-resistant glass, [Ceramic Sheild}, Ambient light
+                            sensor, Proximity sensor</td>
+                    </tr>
+                </table>
+                <div class="second">
+                    <p class="Display">Hardware</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>Weight:</td>
+                        <td>240 g (8.47 oz)</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions:</td>
+                        <td>160.8 x 78.1 x 7.7 mm (6.33 x 3.07 x 0.30 in) </td>
+                    </tr>
+                    <tr>
+                        <td>Build:</td>
+                        <td>Glass front (Gorilla Glass), glass back (Gorilla Glass), stainless steel frame</td>
+                    </tr>
+                    <tr>
+                        <td>Refresh rate:</td>
+                        <td>60Hz</td>
+                    </tr>
+                </table>
+
+                <div class="second">
+                    <p class="Display">Camera</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>Main Camera:</td>
+                        <td>12 MP, f/1.5, 26mm (wide), 1.9µm, dual pixel PDAF, sensor-shift OIS
+                            12 MP, f/2.8, 77mm (telephoto), PDAF, OIS, 3x optical zoom
+                            12 MP, f/1.8, 13mm, 120˚ (ultrawide), PDAF
+                            TOF 3D LiDAR scanner (depth)</td>
+                    </tr>
+                    <tr>
+                        <td>Features:</td>
+                        <td>Dual-LED dual-tone flash, HDR (photo/panorama)</td>
+                    </tr>
+                    <tr>
+                        <td>Video:</td>
+                        <td>4K@24/30/60fps, 1080p@30/60/120/240fps, 10‑bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode, stereo sound rec.</td>
+                    </tr>
+                    <tr>
+                        <td>Selfi Camera:</td>
+                        <td>12 MP, f/2.2, 23mm (wide), 1/3.6"</td>
+                    </tr>
+                </table>
+
+                <div class="second">
+                    <p class="Display">NetWork</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>SIM:</td>
+                        <td>1Single SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM/eSIM, dual stand-by)</td>
+                    </tr>
+                    <tr>
+                        <td>WLAN:</td>
+                        <td>Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot</td>
+                    </tr>
+                    <tr>
+                        <td>Bluetooth:</td>
+                        <td>5.0, A2DP, LE</td>
+                    </tr>
+                    <tr>
+                        <td>GPS:</td>
+                        <td>Yes, with A-GPS, GLONASS, GALILEO, BDS, QZSS</td>
+                    </tr>
+                </table>
+
+                <div class="second">
+                    <p class="Display">Battery</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>Type:</td>
+                        <td>Li-Ion 4352 mAh, non-removable (16.75 Wh)</td>
+                    </tr>
+                    <tr>
+                        <td>Charging:</td>
+                        <td>Fast charging (27W, unofficial rating), 50% in 30 min (advertised)
+                            USB Power Delivery 2.0
+                            MagSafe wireless charging 15W
+                            Qi magnetic fast wireless charging 7.5W</td>
+                    </tr>
+                </table>
+                
+
+                <div class="second">
+                    <p class="Display">Memory</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>Card slot:</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Internal:</td>
+                        <td>128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM
+                            NVMe</td>
+                    </tr>
+                </table>
+
+                <div class="second">
+                    <p class="Display">Sound</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>Loudspeaker:</td>
+                        <td>Yes, with stereo speakers</td>
+                    </tr>
+                    <tr>
+                        <td>3.5mm jack:</td>
+                        <td>No</td>
+                    </tr>
+                </table>
+                
+                <div class="second">
+                    <p class="Display">Features</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>Sensors:</td>
+                        <td>Face ID, accelerometer, gyro, proximity, compass, barometer
+                            Ultra Wideband (UWB) support</td>
+                    </tr>
+
+                    <tr>
+                        <td>Colors:</td>
+                        <td>Graphite, Gold, Silver, Sierra Blue, Alpine Green</td>
+                    </tr>
+                 
+                </table>
+            </div>
+        </div>
+</body>
+
+</html>

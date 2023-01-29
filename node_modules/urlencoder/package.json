@@ -1,0 +1,25 @@
+{
+  "name": "urlencoder",
+  "version": "0.1.0",
+  "description": "Implementation of `URLEncoder` in Java land",
+  "keywords": [
+    "url",
+    "encode"
+  ],
+  "author": [
+    {
+      "name": "luckydrq",
+      "email": "drqzju@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:luckydrq/urlencoder.git"
+  },
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}

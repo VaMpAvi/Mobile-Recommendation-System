@@ -1,0 +1,164 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #061726;
+    padding: 20px;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+  
+  }
+  
+  .topnav a.active {
+    color: white;
+    margin-left:660px ;
+    font-size: 24px;
+  }
+  
+  .nav{
+      margin-left: 25px;
+      font-size: 24px;
+  }
+  
+  .topnav input[type=text] {
+      float: left;
+      padding: 8px;
+      border: none;
+      margin-top: 8px;
+      margin-left: 200px;
+      width: 130px;
+      font-size: 17px;
+      
+    }
+  
+    .search{
+        text-align: center;
+        border-radius: 10px;
+        background: url(search.jpg) no-repeat left ;
+        background-position: 10px;  
+        background-color: #0A2D4D; 
+        padding: auto;
+        width: 90%;
+        height: 50px;
+        margin-top: 30px;
+        margin-left: 70px;
+    }
+    .Profile{
+      background-color: #0A2D4D;
+      border-radius: 90px;
+      position: absolute;
+      margin-top: 5px;
+      margin-left: 450px;
+      
+    }
+    .Pro{
+      padding: 8px;
+    
+    }
+
+    .card {
+      width: 242px;
+      height: 206px;
+      background-color: #0A2D4D;
+      margin: 20px 60px;
+      border-radius: 10%;
+      border: 4px solid black;
+      align-items: center;
+      box-shadow: 3.21088px 4.28118px 8.56236px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    .small-cards{
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* padding:5px; */
+    margin-left: 70px;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    z-index: 10;
+  
+    }
+
+
+
+    section {
+      position: relative;
+      height: 35vh;
+      background-color: #061726;
+    }
+    
+    
+    section:last-of-type {
+      background-color: white;
+    }
+
+    .card-big{
+      width: 400px;
+      height: 300px;
+      background-color: #0A2D4D;
+      margin: 20px 60px;
+      border-radius: 30px;
+      border: 4px solid black;
+      align-items: center;
+      box-shadow: 3.21088px 4.28118px 8.56236px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    .big-cards{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding:5px;
+      margin-left: 70px;
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom:-150px ;
+      z-index: 10;
+      margin-left: 200px;
+      margin-top: 20px;
+    }
+    
+    .card-big1{
+      width: 400px;
+      height: 300px;
+      background-color: #0A2D4D;
+      margin: 20px 60px;
+      border-radius: 30px;
+      border: 4px solid black;
+      align-items: center;
+      box-shadow: 3.21088px 4.28118px 8.56236px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    .img{
+      padding: 10px;
+      border-radius: 1.4em;
+      width: 80px;
+      height: 170px;
+    }
+    
+    /* Image inside Small Boxes*/
+    .imgname{
+     margin-top: 50px;
+     font-size: 20px;
+     color: white;
+    }
+    
+    .price{
+      font-size: 20px;;
+     color: white;
+     position: absolute;
+     margin-top: 60px;
+    }
+    

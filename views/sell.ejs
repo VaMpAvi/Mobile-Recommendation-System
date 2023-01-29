@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assests/sell.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="topnav">
+            <a class="home" href="/">Home</a>
+            <a class="nav" href="/getPhone/find">Find a Device</a>
+            <a class="active nav" href="/compare">Compare</a>
+            <a class="nav" href="/sell">Sell</a>
+            <input class="search" type="text" placeholder="Search">
+            <span class="Profile">
+                <a href="/signin"> <img class="Pro" src="/assests/Vector.png"></a>
+               </span>
+        </div>
+        <form id="sell" method="POST" action="/getPhone/sell" enctype="multipart/form-data">
+        <div class="grid-container">
+            <div class="box1">
+                <div class="inside-box">
+                    <input type="file" id="file" hidden="hidden" name="cover">
+                    <img id="plus-sign" src="Plus.png">
+                </div>
+                <div class="inside-box">
+                    <input type="file" id="file2" hidden="hidden">
+                    <img id="plus-sign2" src="Plus.png">
+                </div>
+                <div class="inside-box">
+                    <input type="file" id="file3" hidden="hidden">
+                    <img id="plus-sign3" src="Plus.png">
+                </div>
+                <div class="inside-box">
+                    <input type="file" id="file4" hidden="hidden">
+                    <img id="plus-sign4" src="Plus.png">
+                </div>
+            </div>
+
+
+
+
+            <div class="box2">
+                <p class="text"> Description</p>
+                <hr>
+                <div class="first">
+                    
+            
+                        <label>Phone Name</label><br>
+                        <input type="text" class="input-field1" name = "mobile_name">
+                        <label>RAM</label><br>
+                        <input type="text" class="input-field1" name="ram">
+                        <label>Memory</label><br>
+                        <input type="text" class="input-field1" name="rom">
+            
+              
+
+                </div>
+                <p class="text"> Price</p>
+                <hr>
+                <div class="second">
+                    <input type="text" class="input-field" name = "price">
+                </div>
+                <button class="submitbtn">Post</button>
+            </div>
+        </div>
+    
+    </form>
+  
+    </div>
+
+
+    <script type="text/javascript">
+        const image = document.getElementById("plus-sign");
+        const filebtn = document.getElementById("file");
+
+        image.addEventListener("click", function () {
+            filebtn.click();
+        })
+
+
+        const image2 = document.getElementById("plus-sign2");
+        const filebtn2 = document.getElementById("file2");
+
+        image2.addEventListener("click", function () {
+            filebtn2.click();
+        })
+
+
+        const image3 = document.getElementById("plus-sign3");
+        const filebtn3 = document.getElementById("file3");
+
+        image3.addEventListener("click", function () {
+            filebtn3.click();
+        })
+
+        const image4 = document.getElementById("plus-sign4");
+        const filebtn4 = document.getElementById("file4");
+
+        image4.addEventListener("click", function () {
+            filebtn4.click();
+        })
+    </script>
+
+</body>
+
+</html>

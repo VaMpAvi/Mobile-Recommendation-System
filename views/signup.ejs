@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assests/Login.css">
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div class="background">
+        <div class="login-box">
+            <div class="image">
+                <img src="/assests/image.png">
+            </div>
+            <div class="input">
+                <form id='sign' method="POST" action="/signup/signin" >
+                    <label>Name</label><br>
+                    <input type="text" class="input-field" name="fname"> <br>
+                    <% if( data.user==true){ %>
+                        <p>The email already exits</p>
+                        
+                <% } %>
+                    <label style="margin-top: 10px;">Email Address</label><br>
+                    <input type="text" class="input-field" name="email"><br>
+                    <label>Password</label><br>
+                    <input type="password" class="input-field1" name="password">
+                    <span style="font-size: 25px; color: white;">Already have an account?</span><span style="margin-left: 10px;"><a href="/signin">Signin</a></span><br>
+                <div class="button">
+                    <button class="submit"><span class="text">Sign up</span><span class="arrow"><img
+                                src="/assests/Vector1.png"></span></button>
+                </div>
+            </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

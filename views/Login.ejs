@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assests/signup.css">
+</head>
+
+<body>
+    <div class="background-image"> </div>
+    <div class="background">
+        <div class="login-box">
+            <div class="image">
+                <img src="/assests/image.png">
+            </div>
+            <div class="input">
+                <form id='login' method="POST" action="/signin/login">
+
+                    <label style="margin-top: 10px;">Email Address</label><br>
+                    <input type="text" class="input-field" name="email"><br>
+                    <label>Password</label><br>
+                    <% if( data.user==true){ %>
+                        <p>Password don't match </p>
+                        
+                <% } %>
+                    <input type="password" class="input-field1" name="password"><br>
+                    <span style="font-size: 25px; color: white;">Don't have an Account?</span><span style="margin-left: 10px;"><a href="/signup">Sign Up</a></span><br>
+                    <span><a href="/">Forget Password?</a>  </a></span>
+                   
+                    <div class="button">
+                        <button class="submit"><span class="text">Sign up</span><span class="arrow"><img
+                                    src="/assests/Vector1.png"></span></button>
+                    </div>
+                </form>
+             
+               
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+</div>
+</body>
+
+</html>

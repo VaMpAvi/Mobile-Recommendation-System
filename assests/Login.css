@@ -1,0 +1,115 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url( "/assests/background.png" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    z-index: -1;
+} 
+
+.login-box{
+    height: 800px;
+    width: 1550px;
+    margin: 5% auto;
+    border-radius: 50px;
+    border: 5px solid #134775;
+    background: #061726;
+    box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.image{
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    float: left;
+}
+
+.input{
+    height:716px;
+    width: 700px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 70%;
+    position:absolute;
+    /* border: 1px solid red; */
+    margin-top: 50px;
+  
+    
+}
+
+.input-field{
+    border-bottom: 1.9606px solid #0085FF;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0;
+    margin: 30px 0;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    color: white;
+    font-size: 27.45px;
+    background-image: url("/assests/Path.png");
+    background-repeat: no-repeat;
+    background-position: right ;
+    
+}
+
+
+.input-field1{
+    border-bottom: 1.9606px solid #0085FF;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding:10px 0;
+    margin: 30px 0;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    color: white;
+    font-size: 27.45px;
+    background-image: url("/assests/Shape.png");
+    background-repeat: no-repeat;
+    background-position: right ;
+}
+
+label{
+    color:#0085FF;
+    font-size: 27.45px;
+    font-weight: 400;
+}
+
+.submit{
+    width: 100%;
+    height: 129px;
+    background: linear-gradient(96.89deg, #0085FF 2.92%, #061726 97.16%);
+    border-radius: 25px; 
+    margin-top: 30px;
+    border: none;
+    box-shadow: 0px 14.3333px 28.6667px rgba(27, 57, 255, 0.2);
+
+  
+  
+   
+}
+.text{
+    font-size:28.6px ;
+    text-align: left;
+    color: white;  
+   margin-left: 46px;
+}
+.arrow{
+    margin-left: 400px;
+}

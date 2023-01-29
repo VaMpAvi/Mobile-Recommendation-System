@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda&family=Montserrat:wght@100;400&display=swap');
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ 
+
+}
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color:#061726;
+    padding: 40px;
+    height: 90px;
+  }
+
+  .topnav :active{
+    background-color: #0A2D4D;
+  }
+  
+  
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+  
+  }
+  
+.home {
+    margin-left:550px ;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .nav{
+      margin-left: 25px;
+      font-size: 24px;
+      font-weight: 700;
+  
+  }
+  
+  .topnav input[type=text] {
+      float: left;
+      padding: 8px;
+      border: none;
+      margin-top: 10px;
+      margin-left: 300px;
+      width: 130px;
+      font-size: 17px;
+      
+    }
+  
+    .search{
+        text-align: center;
+        border-radius: 100px;
+        background: url(search.jpg) no-repeat left ;
+        background-position: 10px;  
+        background-color: #0A2D4D; 
+        padding: auto;
+      }    
+  
+  
+      .Profile{
+        background-color: #0A2D4D;
+        border-radius: 90px;
+        position: absolute;
+        margin-top: 2px;
+        margin-left: 55px;
+        
+      }
+      .Pro{
+        padding: 0px;
+        /* margin-right: 10px; */
+      }
+
+      .card {
+        width: 400px;
+        height: 300px;
+        background-color: #0A2D4D;
+        margin: 50px 140px;
+        border-radius: 10%;
+        border: 4px solid black;
+        align-items: center;
+        box-shadow: 3.21088px 4.28118px 8.56236px rgba(0, 0, 0, 0.25);
+        position: relative;
+      }
+
+
+      .cards{
+          display: grid;
+          /* width: 100%; */
+          grid-template-columns: 1fr 1fr 1fr ;
+        
+          
+      }
+
+      .mobdetails{
+        color: white;
+        font-weight: 100;
+        font-size: 30px;
+        margin-top: 50px;
+        padding: 10px;
+        /* border: 1px solid red; */
+        width:fit-content;
+        margin-left: 160px;
+        
+      }
+
+      .image{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 133px;
+        height: 274px;
+
+      }
+      p{
+        line-height: 50px;
+      }

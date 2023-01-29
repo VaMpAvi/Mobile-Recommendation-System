@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assests/compare.css">
+    
+</head>
+
+<body>
+ 
+    <div class="main">
+        <%- include('partial/nav') %>
+        <div id="list"></div>
+        <div class="text-area">
+            <label>Enter a Device</label><br>
+            <input id = "dev1" type="text" class="input-text" name ="dev1"><br>
+            <label>Enter a Device</label><br>
+            <input id="dev2" type="text" class="input-text" name = "dev2">
+            <button id="comparebtn" >Compare</button>
+        </div>
+        <div id="grid-container">
+            <div class="box1">
+                <div class="first">
+                    <img id = "c1"style="float: left;">
+                    <div class="info"></div>
+                    <p id = "c1_name" class="info"> Apple iPhone 13 Mini </p>
+                    <p class="info"> [128GB]-[Prouduct] RED</p>
+                    <div class="pallete">
+                        <div class="one" style="background-color: #9F5251;"> </div>
+                        <div class="one" style="background-color:  #ABB9C2;"> </div>
+                        <div class="one" style="background-color: #9D9EA0;"> </div>
+                        <div class="one" style="background-color: #0A2D4D;"> </div>
+                        <div class="one" style="background-color: #F7ECEA;"> </div>
+                        <div class="one" style="background-color: #FAF9F7;"> </div>
+                    </div>
+                    <p class="image_name"><span>&#8377;200000.00</span></p>
+                </div>
+                <div class="second">
+                    <p class="Display">Display</p>
+                </div>
+                <table id="onee">
+                    <!-- <tr>
+                        <td>Size:</td>
+                        <td>5.4 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Resolution:</td>
+                        <td>2340 x 1080 pixels,477 PPI </td>
+                    </tr>
+                    <tr>
+                        <td>Technology:</td>
+                        <td>OLED</td>
+                    </tr>
+                    <tr>
+                        <td>Refresh rate:</td>
+                        <td>60Hz</td>
+                    </tr>
+                    <tr>
+                        <td>Screen-to-body:</td>
+                        <td>68.31 %</td>
+                    </tr> -->
+               
+                </table>
+            
+
+            </div>
+
+
+            <div class="box2">
+                <div class="first">
+                    <img style="float: left;" src="/assests/iphones.png">
+                    <div class="info"></div>
+                    <p class="info"> Apple iPhone 13 Mini </p>
+                    <p class="info"> [128GB]-[Prouduct] RED</p>
+                    <div class="pallete">
+                        <div class="one" style="background-color: #9F5251;"> </div>
+                        <div class="one" style="background-color:  #ABB9C2;"> </div>
+                        <div class="one" style="background-color: #9D9EA0;"> </div>
+                        <div class="one" style="background-color: #0A2D4D;"> </div>
+                        <div class="one" style="background-color: #F7ECEA;"> </div>
+                        <div class="one" style="background-color: #FAF9F7;"> </div>
+                    </div>
+                    <p class="image_name"><span>&#8377;200000.00</span></p>
+                </div>
+                <div class="second">
+                    <p class="Display">Display</p>
+                </div>
+                <table id="seven">
+                    <!-- <tr>
+                        <td>Size:</td>
+                        <td>5.4 inches</td>
+                    </tr>
+                    <tr>
+                        <td>Resolution:</td>
+                        <td>2340 x 1080 pixels,477 PPI </td>
+                    </tr>
+                    <tr>
+                        <td>Technology:</td>
+                        <td>OLED</td>
+                    </tr>
+                    <tr>
+                        <td>Refresh rate:</td>
+                        <td>60Hz</td>
+                    </tr>
+                    <tr>
+                        <td>Screen-to-body:</td>
+                        <td>68.31 %</td>
+                    </tr> -->
+
+                </table>
+               
+
+                
+            </div>
+
+        </div>
+    </div>
+
+
+    
+<script>
+    const element = document.getElementById("comparebtn");
+    element.addEventListener("click", myFunction);
+    function myFunction()
+    {
+        var dev1 = document.getElementById("dev1").value;
+        var dev2 = document.getElementById("dev2").value;
+       data(dev1, dev2);
+    }
+
+    async function data(dev1, dev2){
+
+        var t1 = document.getElementById("onee");
+     
+        var t7 = document.getElementById("seven");
+        var text = "";
+        const res = await fetch("/compare?dev1=" + dev1+"&dev2=" + dev2);
+        var data = await res.json().catch((err) => {
+            console.error(err);
+        });
+        console.log(data);
+        
+        if (data.ret != undefined && data.ret2 != undefined) {
+            
+             text += `<tr>
+                <td>Size:</td>
+                <td>${data.ret.mobile_name}</td>
+            </tr>
+            <tr>
+                <td>Resolution:</td>
+                <td>${data.ret.ram} </td>
+            </tr>
+            <tr>
+                <td>Technology:</td>
+                <td>${data.ret.rom} </td>
+            </tr>`;
+        
+            t1.innerHTML = text;
+         
+            text = "";
+            text += `<tr>
+                <td>Size:</td>
+                <td>${data.ret2.mobile_name}</td>
+            </tr>
+            <tr>
+                <td>Resolution:</td>
+                <td>${data.ret2.ram} </td>
+            </tr>
+            <tr>
+                <td>Technology:</td>
+                <td>${data.ret2.rom} </td>
+            </tr>`;
+        
+            t7.innerHTML = text;
+           
+
+        }
+        else
+        t1.innerHTML="";
+        var targetdiv = document.getElementById("grid-container");
+ 
+        targetdiv.style.display ="grid";
+        
+
+
+    
+        console.log(dev1);
+    }
+
+    async function dataa(key) {
+        const match = document.getElementById("list");
+        var text = "";
+        const res = await fetch("/getPhone/search/auto?search=" + key);
+        const data = await res.json().catch((err) => {
+            console.error(err);
+        });
+        if (data[0] != undefined && key != "") {
+            data.forEach((element) => {
+              console.log(element.mobile_name);
+                text += `<div class="searchlist">
+                <ul><a href="/getPhone/search?search=${element.mobile_name}">${element.mobile_name}</h4> </a></ul>
+                </div>`;
+            });
+            match.innerHTML = text;
+        } else match.innerHTML = "";
+    };
+    
+    document.getElementById("search").addEventListener("keyup", (event) => {
+        var x = document.getElementById("search").value;
+       // console.log(document.cookie.split("="));
+        dataa(x);
+    });
+</script>
+</body>
+
+</html>
